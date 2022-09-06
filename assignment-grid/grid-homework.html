@@ -10,45 +10,68 @@
         margin: 0%;
       }
       .overall-grid {
-        display: grid;
-        grid-template-columns: 200px 200px 200px;
-        row-gap: 10px;
-        column-gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        column-gap: 20px;
+        max-width: 800px;
+        /* background-color: yellow;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */ */
       }
+      .blue,
+      .red,
+      .orange {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 20px;
+        min-width: 150px;
+        /* background-color: red;; */
+      }
+
       .blue-grid {
-        display: grid;
-        grid-template-rows: 30px 120px;
+        display: flex;
+        flex-direction: column;
         border-color: #8ee1ec;
         border-style: solid;
         border-width: 3px;
         border-radius: 10px;
         overflow: hidden;
         color: #2da0af;
+        width: 200px;
+        height: 150px;
       }
       .orange-grid {
-        display: grid;
-        grid-template-rows: 30px 120px;
+        display: flex;
+        flex-direction: column;
         border-color: #ffe082;
         border-style: solid;
         border-width: 3px;
         border-radius: 10px;
         overflow: hidden;
         color: #ffa027;
+        width: 200px;
+        height: 150px;
       }
       .red-grid {
-        display: grid;
-        grid-template-rows: 30px 120px;
+        display: flex;
+        flex-direction: column;
         border-color: #ef9a9a;
         border-style: solid;
         border-width: 3px;
         border-radius: 10px;
         overflow: hidden;
         color: #d23030;
+        width: 200px;
+        height: 150px;
       }
       .blue-title {
         background-color: #e0f7fa;
         border-color: #8ee1ec;
         border-bottom: solid 3px #8ee1ec;
+        padding-top: 3px;
+        padding-bottom: 3px;
 
         color: #2da0af;
         font-weight: bold;
@@ -60,6 +83,8 @@
         background-color: #fff8e1;
         border-color: #ffa440;
         border-bottom: solid 3px #ffe082;
+        padding-top: 3px;
+        padding-bottom: 3px;
 
         color: #ffa440;
         font-weight: bold;
@@ -71,6 +96,8 @@
         background-color: #ffebee;
         border-color: #d23030;
         border-bottom: solid 3px #ef9a9a;
+        padding-top: 3px;
+        padding-bottom: 3px;
 
         color: d23030;
         font-weight: bold;
@@ -82,7 +109,8 @@
         text-align: center;
       }
       img {
-        height: 60px;
+        display: flex;
+        height: 100px;
         text-align: center;
       }
       .content {
@@ -90,74 +118,80 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 3px;
       }
     </style>
   </head>
   <body>
     <div class="overall-grid">
-      <div class="blue-grid">
-        <div class="blue-title">7:25 AM</div>
-        <div class="content">
-          <div><img src="icon/flight1.png" /></div>
-          <div><p>Boston</p></div>
+      <div class="blue">
+        <div class="blue-grid">
+          <div class="blue-title">7:25 AM</div>
+          <div class="content">
+            <div><img src="icon/flight1.png" /></div>
+            <div><p>Boston</p></div>
+          </div>
+        </div>
+        <div class="blue-grid">
+          <div class="blue-title">8:15 PM</div>
+          <div class="content">
+            <div><img src="icon/flight2.png" /></div>
+            <div><p>Madrid</p></div>
+          </div>
+        </div>
+        <div class="blue-grid">
+          <div class="blue-title">Translate</div>
+          <div class="content">
+            <div><img src="icon/language.png" /></div>
+            <div><p>Spanish</p></div>
+          </div>
         </div>
       </div>
-      <div class="blue-grid">
-        <div class="blue-title">8:15 PM</div>
-        <div class="content">
-          <div><img src="icon/flight2.png" /></div>
-          <div><p>Madrid</p></div>
+      <div class="orange">
+        <div class="orange-grid">
+          <div class="orange-title">Bike</div>
+          <div class="content">
+            <div><img src="icon/bike.png" /></div>
+            <div><p>13.1 miles</p></div>
+          </div>
         </div>
-      </div>
-      <div class="blue-grid">
-        <div class="blue-title">Translate</div>
-        <div class="content">
-          <div><img src="icon/language.png" /></div>
-          <div><p>Spanish</p></div>
+        <div class="orange-grid">
+          <div class="orange-title">Boat</div>
+          <div class="content">
+            <div><img src="icon/boat.png" /></div>
+            <div><p>90 Minutes</p></div>
+          </div>
+        </div>
+        <div class="orange-grid">
+          <div class="orange-title">Drive</div>
+          <div class="content">
+            <div><img src="icon/drive.png" /></div>
+            <div><p>48 Miles</p></div>
+          </div>
         </div>
       </div>
 
-      <div class="orange-grid">
-        <div class="orange-title">Bike</div>
-        <div class="content">
-          <div><img src="icon/bike.png" /></div>
-          <div><p>13.1 miles</p></div>
+      <div class="red">
+        <div class="red-grid">
+          <div class="red-title">Morning</div>
+          <div class="content">
+            <div><img src="icon/morning.png" /></div>
+            <div><p>Coffee</p></div>
+          </div>
         </div>
-      </div>
-      <div class="orange-grid">
-        <div class="orange-title">Boat</div>
-        <div class="content">
-          <div><img src="icon/boat.png" /></div>
-          <div><p>90 Minutes</p></div>
+        <div class="red-grid">
+          <div class="red-title">Afternoon</div>
+          <div class="content">
+            <div><img src="icon/gym.png" /></div>
+            <div><p>Gym</p></div>
+          </div>
         </div>
-      </div>
-      <div class="orange-grid">
-        <div class="orange-title">Drive</div>
-        <div class="content">
-          <div><img src="icon/drive.png" /></div>
-          <div><p>48 Miles</p></div>
-        </div>
-      </div>
-
-      <div class="red-grid">
-        <div class="red-title">Morning</div>
-        <div class="content">
-          <div><img src="icon/morning.png" /></div>
-          <div><p>Coffee</p></div>
-        </div>
-      </div>
-      <div class="red-grid">
-        <div class="red-title">Afternoon</div>
-        <div class="content">
-          <div><img src="icon/gym.png" /></div>
-          <div><p>Gym</p></div>
-        </div>
-      </div>
-      <div class="red-grid">
-        <div class="red-title">Night</div>
-        <div class="content">
-          <div><img src="icon/night.png" /></div>
-          <div><p>Hot Tub</p></div>
+        <div class="red-grid">
+          <div class="red-title">Night</div>
+          <div class="content">
+            <div><img src="icon/night.png" /></div>
+            <div><p>Hot Tub</p></div>
+          </div>
         </div>
       </div>
     </div>
